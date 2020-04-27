@@ -1,0 +1,22 @@
+{
+    "require": {
+        "facebook/webdriver": "^1.7",
+        "phpunit/phpunit-selenium": "^8.0"
+    },
+    "scripts": {
+        "startTestLogInPos": "php bin/startTestLogInPos.php",
+        "startTestLogInNegPass": "php bin/startTestLogInNegPass.php",
+        "startTestLogInNegMail": "php bin/startTestLogInNegMail.php",
+        "startTestLogInEmptyInputs": "php bin/startTestLogInEmptyInputs.php"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fit4Life\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    }
+}
