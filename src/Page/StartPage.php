@@ -6,7 +6,8 @@ use Exception;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverExpectedCondition;
-use PHPUnit\Framework\Assert;
+
+
 
 class StartPage extends Page
 {
@@ -14,18 +15,23 @@ class StartPage extends Page
     {
         /**Open session. Load an url. */
         $this->driver->get("https://antonmalinovskiy.wixsite.com/website-3");
-//        $this->assertEquals("titleMain", $driver->getTitle());
+        $this->assertEquals("Home | fit4life", $this->driver->getTitle());
 
-        try{
-            $this->driver->wait(10, 50)->until(
-                WebDriverExpectedCondition::titleIs("Home | fit4life"));
-        }
+        $element = $this->driver->findElement(WebDriverBy::xpath("//*[@id=\"comp-k9flyvm93\"]/p/span/span/a"));
+        if ($element) {
+            try{
+                $this->assertNotNull((WebDriverBy::xpath("//*[@id=\"comp-k9flyvm93\"]/p/span/span/a"))
+                );
+            }
         catch (Exception $e)
         {
-            echo ' <<Houston, we have a problem. My Account page missed.>> ';
+            echo ' <<Houston, we have a problem. Main page missed.>> ';
+        }
         }
 
         echo " <<Houston, flight normal. Main page passed.>> ";
+
+//        $this->driver->quit();
 
     }
 

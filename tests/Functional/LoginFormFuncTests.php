@@ -5,6 +5,7 @@ namespace Tests\Functional;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Fit4Life\Page\SignUpLoginPage;
 use Fit4Life\Page\StartPage;
+use Fit4Life\Page\AccountPage;
 use Tests\AbstractTest;
 
 class LoginFormFuncTests extends AbstractTest
@@ -37,6 +38,12 @@ class LoginFormFuncTests extends AbstractTest
 
         $dropDownMenuStartPage = new StartPage($this->driver);
         $dropDownMenuStartPage->dropdownMenuAccount();
+
+        $accountPage = new AccountPage($this->driver);
+        $accountPage->accountPageVer();
+
+//        $accountPageInputs = new AccountPage($this->driver);
+//        $accountPageInputs->accountPageInputsVer();
 
         $dropDownMenuStartPage = new StartPage($this->driver);
         $dropDownMenuStartPage->close();

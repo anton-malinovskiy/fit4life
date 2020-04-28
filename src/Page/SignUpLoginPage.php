@@ -6,6 +6,7 @@ use Exception;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverExpectedCondition;
 
+
 class SignUpLoginPage extends Page
 
 
@@ -18,7 +19,7 @@ class SignUpLoginPage extends Page
 
         $element = $this->driver->findElement(WebDriverBy::id("signUpDialogemailInputinput"));
         $element->click();
-        $element->sendKeys("anton.malinovskiy@nsight.pl");
+        $element->sendKeys("test@nsight.pl");
 
         $element = $this->driver->findElement(WebDriverBy::id("signUpDialogpasswordInputinput"));
         $element->click();
@@ -42,7 +43,7 @@ class SignUpLoginPage extends Page
         /**Email-login input  */
         $element = $this->driver->findElement(WebDriverBy::id("memberLoginDialogemailInputinput"));
         $element->click();
-        $element->sendKeys("anton.malinovskiy@nsight.pl");
+        $element->sendKeys("test@nsight.pl");
         /**Password input  */
         $element = $this->driver->findElement(WebDriverBy::id("memberLoginDialogpasswordInputinput"));
         $element->click();
