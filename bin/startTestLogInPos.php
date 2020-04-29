@@ -14,7 +14,7 @@ $caps = array(
     "name" => "Test login form positive."
 );
 $webDriver = RemoteWebDriver::create(
-    "https://katarzynakot1:PH3cK6nCVm6zB2AEBqSX@hub-cloud.browserstack.com/wd/hub",
+    "https://antonmalinovskiy1:osqxUEUFyHcYPwSemA2y@hub-cloud.browserstack.com/wd/hub",
     $caps
 );
 
